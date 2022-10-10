@@ -11,8 +11,10 @@ class FirstController extends AbstractController
     #[Route('/first', name: 'app_first')]
     public function index(): Response
     {
-       return new Response(
-           content: "<h1> Hello Word</h1>"
-       );
+        return $this->render('first/index.html.twig',[
+            'name' => 'Hafedh',
+            'name2' => 'Dziri'
+        ]);
+
     }
 }
